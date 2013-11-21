@@ -26,6 +26,15 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="header container" ng-controller="HeaderCtrl">
+      <ul class="nav nav-pills pull-right">
+        <li ng-class="{ active: isActive('/')}"><a href="#">Home</a></li>
+        <li ng-class="{ active: isActive('/about')}"><a href="#/about">About</a></li>
+        <li ng-class="{ active: isActive('/contact')}"><a href="#/contact">Contact</a></li>
+      </ul>
+      <h3 class="text-muted">TODO list</h3>
+    </div>
+ 
     <div class="container" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -69,6 +78,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers\main.js"></script>
+        <script src="scripts/controllers\header.js"></script>
         <!-- endbuild -->
 </body>
 </html>
